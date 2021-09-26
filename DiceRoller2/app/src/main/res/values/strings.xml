@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dice Roller</string>
+    <string name="roll_text">Roll</string>
+    <string name="roll">Roll</string>
+    <string name="topcomment1">I know the images are kinda not sized very well</string>
+    <string name="diceimage1">diceImage1</string>
+    <string name="diceimage2">diceImage2</string>
+    <string name="coinimage">coinImage</string>
+    <string name="click">!!Click!!</string>
+</resources>
