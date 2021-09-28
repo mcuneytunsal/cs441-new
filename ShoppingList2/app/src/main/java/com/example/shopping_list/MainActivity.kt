@@ -3,7 +3,6 @@ package com.example.shopping_list
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
              addGrocery()
          }
 
-        val execute: Button = findViewById(R.id.button2)
+        val execute: Button = findViewById(R.id.button)
         execute.setOnClickListener { clickButton() }
 
         // accessing listView
@@ -36,5 +35,5 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = arrayAdapter
     }
 
-
+    //commit trial 1, don't know why I can't seem to get it working
 }
