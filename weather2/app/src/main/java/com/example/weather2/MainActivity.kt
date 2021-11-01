@@ -15,7 +15,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     //change city from here
-    val CITY: String = "istanbul,tr"
+    val CITY: String = "newyork,usa"
     //my API key, from https://home.openweathermap.org/
     val API: String = "c76860c21cacc1b856fe3519b6835ce8" // Use API key
 
