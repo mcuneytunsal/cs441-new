@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     //currentGold variable set to 0
     private var currentGold=0
+    private var increment=1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         //increments gold in each click
         imgEnemy.setOnClickListener{
-            currentGold ++
+            currentGold += increment
             showGold.text="$currentGold"
         }
     }
