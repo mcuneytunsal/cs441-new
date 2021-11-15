@@ -33,27 +33,36 @@ class MainActivity : AppCompatActivity() {
         val showGold: TextView= findViewById(R.id.currentGold)
         val btnClickPower: Button=findViewById(R.id.upClick)
         val showClickPower: TextView=findViewById(R.id.currentClickPower)
+        val showClickCost: TextView=findViewById(R.id.currentClickCost)
         val btnIdlePower: Button= findViewById(R.id.upIdle)
         val showIdlePower: TextView=findViewById(R.id.currentIdlePower)
+        val showIdleCost: TextView=findViewById(R.id.currentIdleCost)
         val btnPrestige: Button= findViewById(R.id.upPrestige)
         val showPrestige: TextView =findViewById(R.id.currentPrestige)
-
+        val showPrestigeCost: TextView=findViewById(R.id.currentPrestigeCost)
         val showStage:TextView=findViewById(R.id.currentStage)
+
         showStage.text="$currentStage"
+        showClickCost.text="$clickUpgrade"
+        showIdleCost.text="$idleUpgrade"
+        showPrestigeCost.text="$prestigeUpgrade"
+
 
         //increments gold in each click
         imgEnemy.setOnClickListener{
             currentGold += currentClickPower
             showGold.text="$currentGold"
+
         }
 
         //upgrades click power
         btnClickPower.setOnClickListener{
             if (currentGold>=clickUpgrade) {
                 currentGold -= clickUpgrade
-                currentClickPower++
+                currentClickPower+=currentClickPower
                 clickUpgrade+=clickUpgrade
                 showClickPower.text = "$currentClickPower"
+                showClickCost.text="$clickUpgrade"
                 //always update current gold
                 showGold.text="$currentGold"
             }
@@ -69,8 +78,10 @@ class MainActivity : AppCompatActivity() {
                 currentIdlePower++
                 idleUpgrade+=idleUpgrade
                 showIdlePower.text = "$currentIdlePower"
+                showIdleCost.text="$idleUpgrade"
                 //always update current gold
                 showGold.text = "$currentGold"
+
             }
             else{
                 Toast.makeText(this,"Need More Gold!", Toast.LENGTH_SHORT).show()
@@ -93,9 +104,12 @@ class MainActivity : AppCompatActivity() {
                 showGold.text = "$currentGold"
                 showIdlePower.text = "$currentIdlePower"
                 showClickPower.text = "$currentClickPower"
+                showClickCost.text="$clickUpgrade"
+                showIdleCost.text="$idleUpgrade"
+                showPrestigeCost.text="$prestigeUpgrade"
             }
             else{
-                Toast.makeText(this,"Reach Stage 5 to unlock Prestige!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Reach needed stage to Prestige!", Toast.LENGTH_SHORT).show()
             }
         }
 

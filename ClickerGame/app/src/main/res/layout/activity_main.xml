@@ -52,49 +52,81 @@
         android:id="@+id/upClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="400dp"
         android:text="Click Power"
-        android:textSize="14dp" />
+        android:textSize="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="470dp"
-        android:text="Current:"
+        android:layout_marginTop="450dp"
+        android:text="Gold Per Click:"
         android:textSize="14dp" />
 
     <TextView
         android:id="@+id/currentClickPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="450dp"
+        android:text="1"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:text="Gold Cost:"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/currentClickCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="470dp"
         android:text="1"
         android:textSize="14dp" />
+
 
     <!--Idle Power-->
     <Button
         android:id="@+id/upIdle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="490dp"
         android:text="Idle Power   "
-        android:textSize="14dp" />
+        android:textSize="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="555dp"
-        android:text="Current:"
+        android:layout_marginTop="535dp"
+        android:text="Gold Per Second:"
         android:textSize="14dp" />
 
     <TextView
         android:id="@+id/currentIdlePower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="535dp"
+        android:text="0"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="555dp"
-        android:text="1"
+        android:text="Gold Cost:"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/currentIdleCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="555dp"
+        android:text="0"
         android:textSize="14dp" />
 
     <!--prestige-->
@@ -102,9 +134,26 @@
         android:id="@+id/upPrestige"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="510dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="490dp"
         android:text="Prestige   "
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="535dp"
+        android:text="Level:"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/currentPrestige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="535dp"
+        android:text="0"
         android:textSize="14dp" />
 
     <TextView
@@ -112,15 +161,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="250dp"
         android:layout_marginTop="555dp"
-        android:text="Current:"
+        android:text="Next in Stage:"
         android:textSize="14dp" />
+
     <TextView
-        android:id="@+id/currentPrestige"
+        android:id="@+id/currentPrestigeCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
         android:layout_marginTop="555dp"
-        android:layout_marginStart="303dp"
-        android:text="0"
-        android:textSize="14dp"/>
+        android:text="1"
+        android:textSize="14dp" />
 
 </RelativeLayout>
