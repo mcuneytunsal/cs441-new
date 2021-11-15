@@ -153,6 +153,7 @@ class MainActivity : AppCompatActivity() {
                 showIdleCost.text="$idleUpgrade"
                 //always update current gold
                 showGold.text = "$currentGold"
+                Toast.makeText(this,"Didn't Implement This Function Yet", Toast.LENGTH_SHORT).show()
 
             }
             else{
