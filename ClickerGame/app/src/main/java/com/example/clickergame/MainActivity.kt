@@ -18,8 +18,9 @@ class MainActivity : AppCompatActivity() {
     private var currentIdlePower=0
     private var currentPrestige=0
 
-    private var firstClickUpgrade=25
-    private var firstIdleUpgrade=300
+    private var clickUpgrade=25
+    private var idleUpgrade=300
+    private var prestigeUpgrade=5
 
 
 
@@ -48,10 +49,10 @@ class MainActivity : AppCompatActivity() {
 
         //upgrades click power
         btnClickPower.setOnClickListener{
-            if (currentGold>=firstClickUpgrade) {
-                currentGold -= firstClickUpgrade
+            if (currentGold>=clickUpgrade) {
+                currentGold -= clickUpgrade
                 currentClickPower++
-                firstClickUpgrade+=firstClickUpgrade
+                clickUpgrade+=clickUpgrade
                 showClickPower.text = "$currentClickPower"
                 //always update current gold
                 showGold.text="$currentGold"
@@ -63,10 +64,10 @@ class MainActivity : AppCompatActivity() {
 
         //upgrades idle power
         btnIdlePower.setOnClickListener{
-            if (currentGold>=firstIdleUpgrade) {
-                currentGold-=firstIdleUpgrade
+            if (currentGold>=idleUpgrade) {
+                currentGold-=idleUpgrade
                 currentIdlePower++
-                firstIdleUpgrade+=firstIdleUpgrade
+                idleUpgrade+=idleUpgrade
                 showIdlePower.text = "$currentIdlePower"
                 //always update current gold
                 showGold.text = "$currentGold"
@@ -78,14 +79,23 @@ class MainActivity : AppCompatActivity() {
 
         //upgrades Prestige
         btnPrestige.setOnClickListener{
-            if (currentStage>=10) {
+            if (currentStage>=1) {
+                currentStage=1
+                currentGold=0
+                currentClickPower=1
+                currentIdlePower=0
                 currentPrestige++
+                clickUpgrade=25
+                idleUpgrade=300
+                prestigeUpgrade++
                 showPrestige.text = "$currentPrestige"
-                //always update current gold
+                //update everything on screen
                 showGold.text = "$currentGold"
+                showIdlePower.text = "$currentIdlePower"
+                showClickPower.text = "$currentClickPower"
             }
             else{
-                Toast.makeText(this,"Reach Stage 10 to unlock Prestige!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Reach Stage 5 to unlock Prestige!", Toast.LENGTH_SHORT).show()
             }
         }
 
