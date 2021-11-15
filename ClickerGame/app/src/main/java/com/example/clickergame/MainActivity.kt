@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
     private var currentIdlePower=0
     private var currentPrestige=0
 
-    private var clickUpgrade=25
+    private var clickUpgrade=10
     private var idleUpgrade=300
-    private var prestigeUpgrade=5
-
+    private var prestigeUpgrade=3
+    private var stageUpgrade=1000
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,8 +41,12 @@ class MainActivity : AppCompatActivity() {
         val showPrestige: TextView =findViewById(R.id.currentPrestige)
         val showPrestigeCost: TextView=findViewById(R.id.currentPrestigeCost)
         val showStage:TextView=findViewById(R.id.currentStage)
+        val btnStage:Button=findViewById(R.id.upStage)
+        val showCurrentStageCost: TextView=findViewById(R.id.currentStageCost)
+        val showCurrentStage: TextView=findViewById(R.id.currentStage)
 
         showStage.text="$currentStage"
+        showCurrentStageCost.text="$stageUpgrade"
         showClickCost.text="$clickUpgrade"
         showIdleCost.text="$idleUpgrade"
         showPrestigeCost.text="$prestigeUpgrade"
@@ -59,8 +63,8 @@ class MainActivity : AppCompatActivity() {
         btnClickPower.setOnClickListener{
             if (currentGold>=clickUpgrade) {
                 currentGold -= clickUpgrade
-                currentClickPower+=currentClickPower
-                clickUpgrade+=clickUpgrade
+                currentClickPower*=2
+                clickUpgrade*=2
                 showClickPower.text = "$currentClickPower"
                 showClickCost.text="$clickUpgrade"
                 //always update current gold
@@ -76,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             if (currentGold>=idleUpgrade) {
                 currentGold-=idleUpgrade
                 currentIdlePower++
-                idleUpgrade+=idleUpgrade
+                idleUpgrade*=2
                 showIdlePower.text = "$currentIdlePower"
                 showIdleCost.text="$idleUpgrade"
                 //always update current gold
@@ -88,17 +92,37 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //upgrades Stage
+        btnStage.setOnClickListener{
+            if(currentGold>stageUpgrade) {
+                currentStage++
+                currentGold -= stageUpgrade
+                stageUpgrade *= 10
+                currentClickPower*=3
+                clickUpgrade*=2
+                showClickPower.text = "$currentClickPower"
+                showCurrentStageCost.text = "$stageUpgrade"
+                showGold.text = "$currentGold"
+                showCurrentStage.text="$currentStage"
+                showClickCost.text="$clickUpgrade"
+            }
+            else{
+                Toast.makeText(this,"Need More Gold!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         //upgrades Prestige
         btnPrestige.setOnClickListener{
-            if (currentStage>=1) {
+            if (currentStage>=prestigeUpgrade) {
                 currentStage=1
                 currentGold=0
                 currentClickPower=1
                 currentIdlePower=0
                 currentPrestige++
-                clickUpgrade=25
+                clickUpgrade=10
                 idleUpgrade=300
                 prestigeUpgrade++
+                stageUpgrade=1000
                 showPrestige.text = "$currentPrestige"
                 //update everything on screen
                 showGold.text = "$currentGold"
@@ -107,6 +131,8 @@ class MainActivity : AppCompatActivity() {
                 showClickCost.text="$clickUpgrade"
                 showIdleCost.text="$idleUpgrade"
                 showPrestigeCost.text="$prestigeUpgrade"
+                showCurrentStage.text="$currentStage"
+                showCurrentStageCost.text="$stageUpgrade"
             }
             else{
                 Toast.makeText(this,"Reach needed stage to Prestige!", Toast.LENGTH_SHORT).show()
