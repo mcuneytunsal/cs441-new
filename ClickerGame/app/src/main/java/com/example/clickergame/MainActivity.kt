@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         val btnStage:Button=findViewById(R.id.upStage)
         val showCurrentStageCost: TextView=findViewById(R.id.currentStageCost)
         val showCurrentStage: TextView=findViewById(R.id.currentStage)
+        val btnResetGame: Button=findViewById(R.id.resetGame)
 
         val tmpGold: TextView=findViewById(R.id.tmpGold)
         val tmpGc1: TextView=findViewById(R.id.tmpGc1)
@@ -58,6 +59,11 @@ class MainActivity : AppCompatActivity() {
         val tmpLevel: TextView=findViewById(R.id.tmpLevel)
 
 
+        val ending1: TextView=findViewById(R.id.endingTop)
+        val ending2: TextView=findViewById(R.id.endingBot)
+        ending1.visibility=View.GONE
+        ending2.visibility=View.GONE
+        btnResetGame.visibility=View.GONE
 
         showCurrentStage.text="$currentStage"
         showCurrentStageCost.text="$stageUpgrade"
@@ -70,6 +76,53 @@ class MainActivity : AppCompatActivity() {
         imgEnemy.setOnClickListener{
             currentGold += currentClickPower
             showGold.text="$currentGold"
+
+        }
+
+        btnResetGame.setOnClickListener{
+            imgEnemy.setImageResource(R.drawable.enemy1)
+            currentStage=1
+            currentGold=0
+            currentClickPower=1
+            currentIdlePower=0
+            clickUpgrade=10
+            idleUpgrade=300
+            stageUpgrade=100
+            prestigeUpgrade=3
+            currentPrestige=0
+
+            showPrestige.text = "$currentPrestige"
+            showPrestigeCost.text="$prestigeUpgrade"
+
+            ending1.visibility=View.GONE
+            ending2.visibility=View.GONE
+            btnResetGame.visibility=View.GONE
+
+
+            btnClickPower.visibility=View.VISIBLE
+            btnIdlePower.visibility=View.VISIBLE
+            btnPrestige.visibility=View.VISIBLE
+            btnStage.visibility=View.VISIBLE
+            showClickCost.visibility=View.VISIBLE
+            showClickPower.visibility=View.VISIBLE
+            showCurrentStage.visibility=View.VISIBLE
+            showCurrentStage.visibility=View.VISIBLE
+            showGold.visibility=View.VISIBLE
+            showIdleCost.visibility=View.VISIBLE
+            showCurrentStageCost.visibility=View.VISIBLE
+            showIdlePower.visibility=View.VISIBLE
+            showPrestige.visibility=View.VISIBLE
+            showPrestigeCost.visibility=View.VISIBLE
+            showCurrentStage.visibility=View.VISIBLE
+            tmpGc1.visibility=View.VISIBLE
+            tmpGc2.visibility=View.VISIBLE
+            tmpGc3.visibility=View.VISIBLE
+            tmpGold.visibility=View.VISIBLE
+            tmpGpc.visibility=View.VISIBLE
+            tmpGps.visibility=View.VISIBLE
+            tmpLevel.visibility=View.VISIBLE
+            tmpNextStage.visibility=View.VISIBLE
+            tmpStage.visibility=View.VISIBLE
 
         }
 
@@ -129,7 +182,7 @@ class MainActivity : AppCompatActivity() {
         //upgrades Prestige
         btnPrestige.setOnClickListener{
             if (currentStage>=prestigeUpgrade) {
-                if (currentPrestige == 0){
+                if (currentPrestige == 4){
                     imgEnemy.setImageResource(R.drawable.enemy2)
                 }
                 if (currentPrestige == 1){
@@ -143,7 +196,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //game ending
-                if (currentPrestige == 4){
+                if (currentPrestige == 0){
                     imgEnemy.setImageResource(R.drawable.enemy6)
                     btnClickPower.visibility=View.GONE
                     btnIdlePower.visibility=View.GONE
@@ -169,6 +222,10 @@ class MainActivity : AppCompatActivity() {
                     tmpLevel.visibility=View.GONE
                     tmpNextStage.visibility=View.GONE
                     tmpStage.visibility=View.GONE
+
+                    ending1.visibility=View.VISIBLE
+                    ending2.visibility=View.VISIBLE
+                    btnResetGame.visibility=View.VISIBLE
                 }
 
                 //resets progression and leveling up
@@ -181,13 +238,13 @@ class MainActivity : AppCompatActivity() {
                 idleUpgrade=300
                 prestigeUpgrade++
                 stageUpgrade=100
-                showPrestige.text = "$currentPrestige"
                 //update everything on screen
                 showGold.text = "$currentGold"
                 showIdlePower.text = "$currentIdlePower"
                 showClickPower.text = "$currentClickPower"
                 showClickCost.text="$clickUpgrade"
                 showIdleCost.text="$idleUpgrade"
+                showPrestige.text = "$currentPrestige"
                 showPrestigeCost.text="$prestigeUpgrade"
                 showCurrentStage.text="$currentStage"
                 showCurrentStageCost.text="$stageUpgrade"

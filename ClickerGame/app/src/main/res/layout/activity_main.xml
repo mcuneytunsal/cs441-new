@@ -17,6 +17,31 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/enemy1" />
 
+    <TextView
+        android:id="@+id/endingTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="The End"
+        android:textSize="33dp" />
+    <TextView
+        android:id="@+id/endingBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:text="Thank You For Playing my Game!"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/resetGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true"
+        android:text="Reset The Game"
+        android:textSize="24dp"/>
+
+
     <!--gold-->
     <TextView
         android:id="@+id/currentGold"
