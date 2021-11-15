@@ -6,15 +6,17 @@
     android:paddingBottom="20dp"
     android:paddingTop="20dp"
     android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:paddingRight="20dp"
+    android:background="@drawable/bg1"
+    >
 
     <!--enemy image in here-->
     <ImageView
         android:id="@+id/imgEnemy"
         android:layout_width="256dp"
         android:layout_height="256dp"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:src="@drawable/enemy1" />
 
     <TextView
@@ -23,14 +25,17 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="The End"
-        android:textSize="33dp" />
+        android:textSize="33dp"
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/endingBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="440dp"
         android:text="Thank You For Playing my Game!"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/resetGame"
@@ -49,14 +54,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:text="0"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tmpGold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gold:"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
 
     <!--Stage-->
     <TextView
@@ -65,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="345dp"
         android:text="0"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tmpStage"
@@ -73,7 +81,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"
         android:text="Stage:"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
 
     <!--Click Power-->
     <Button
@@ -90,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
         android:text="Gold Per Click:"
+        android:textColor="@color/white"
         android:textSize="14dp" />
 
     <TextView
@@ -99,7 +109,8 @@
         android:layout_marginStart="95dp"
         android:layout_marginTop="450dp"
         android:text="1"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tmpGc1"
@@ -107,7 +118,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="470dp"
         android:text="Gold Cost:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
     <TextView
         android:id="@+id/currentClickCost"
         android:layout_width="wrap_content"
@@ -115,7 +127,8 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="470dp"
         android:text="1"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
 
     <!--Idle Power-->
@@ -133,7 +146,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="535dp"
         android:text="Gold Per Second:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/currentIdlePower"
@@ -142,7 +156,8 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="535dp"
         android:text="0"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tmpGc2"
@@ -150,7 +165,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="555dp"
         android:text="Gold Cost:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/currentIdleCost"
@@ -159,7 +175,8 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="555dp"
         android:text="0"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <!--Prestige-->
     <Button
@@ -178,7 +195,8 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="535dp"
         android:text="Level:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/currentPrestige"
@@ -187,7 +205,8 @@
         android:layout_marginStart="290dp"
         android:layout_marginTop="535dp"
         android:text="0"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tmpNextStage"
@@ -196,7 +215,8 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="555dp"
         android:text="Next in Stage:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/currentPrestigeCost"
@@ -205,7 +225,8 @@
         android:layout_marginStart="340dp"
         android:layout_marginTop="555dp"
         android:text="1"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <!--prestige-->
     <Button
@@ -224,7 +245,8 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="450dp"
         android:text="Gold Cost:"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/currentStageCost"
@@ -233,6 +255,7 @@
         android:layout_marginStart="320dp"
         android:layout_marginTop="450dp"
         android:text="0"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>

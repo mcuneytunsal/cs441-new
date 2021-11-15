@@ -2,12 +2,9 @@ package com.example.clickergame
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.core.view.isInvisible
 import org.w3c.dom.Text
 
@@ -32,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //values are set here
+        val background: RelativeLayout=findViewById(R.id.activity_main)
         val imgEnemy: ImageView = findViewById(R.id.imgEnemy)
         val showGold: TextView= findViewById(R.id.currentGold)
         val btnClickPower: Button=findViewById(R.id.upClick)
@@ -71,6 +69,9 @@ class MainActivity : AppCompatActivity() {
         showIdleCost.text="$idleUpgrade"
         showPrestigeCost.text="$prestigeUpgrade"
         imgEnemy.setImageResource(R.drawable.enemy1)
+
+        //change background with this code
+        background.setBackgroundResource(R.drawable.bg1)
 
         //increments gold in each click
         imgEnemy.setOnClickListener{
@@ -162,6 +163,24 @@ class MainActivity : AppCompatActivity() {
         //upgrades Stage
         btnStage.setOnClickListener{
             if(currentGold>stageUpgrade) {
+                if(currentStage==1){
+                    background.setBackgroundResource(R.drawable.bg2)
+                }
+                if(currentStage==2){
+                    background.setBackgroundResource(R.drawable.bg3)
+                }
+                if(currentStage==3){
+                    background.setBackgroundResource(R.drawable.bg4)
+                }
+                if(currentStage==4){
+                    background.setBackgroundResource(R.drawable.bg5)
+                }
+                if(currentStage==5){
+                    background.setBackgroundResource(R.drawable.bg6)
+                }
+                if(currentStage==6){
+                    background.setBackgroundResource(R.drawable.bg7)
+                }
                 currentStage++
                 currentGold -= stageUpgrade
                 stageUpgrade *= 10
