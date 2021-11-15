@@ -1,23 +1,25 @@
 package com.example.clickergame
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import com.example.clickergame.databinding.ActivityMainBinding
+
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+        //ImageView and TextView's are as values or variables here
+        val imgEnemy: ImageView = findViewById(R.id.imgEnemy)
+        var currentGold: TextView = findViewById(R.id.currentGold)
+
+        //toasts "Clicked" to check if the method is working, will change this method later
+        imgEnemy.setOnClickListener{
+            Toast.makeText(this,"Clicked",Toast.LENGTH_SHORT).show()
+        }
     }
 }
