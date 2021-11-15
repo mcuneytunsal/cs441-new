@@ -13,14 +13,24 @@
         android:layout_width="256dp"
         android:layout_height="256dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/enemy"/>
+        android:src="@drawable/enemy" />
+
     <TextView
         android:id="@+id/currentGold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gold"
-        android:layout_above="@id/imgEnemy"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:textSize="40dp"/>
+        android:layout_below="@+id/barGold"
+        android:text="0"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/barGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Gold"
+        android:textSize="30dp" />
+
+
 </RelativeLayout>

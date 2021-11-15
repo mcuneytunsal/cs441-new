@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         //ImageView set as imgEnemy
         val imgEnemy: ImageView = findViewById(R.id.imgEnemy)
+        val showGold: TextView= findViewById(R.id.currentGold)
 
-        //toasts current gold amount
+        //increments gold in each click
         imgEnemy.setOnClickListener{
             currentGold ++
-            Toast.makeText(this, "score = $currentGold", Toast.LENGTH_SHORT).show()
+            showGold.text="$currentGold"
         }
     }
 }
