@@ -8,29 +8,119 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp">
 
+    <!--enemy image in here-->
     <ImageView
         android:id="@+id/imgEnemy"
         android:layout_width="256dp"
         android:layout_height="256dp"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/enemy" />
 
+    <!--gold-->
     <TextView
         android:id="@+id/currentGold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/barGold"
+        android:layout_marginStart="69dp"
         android:text="0"
         android:textSize="30dp" />
-
     <TextView
-        android:id="@+id/barGold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Gold"
+        android:text="Gold:"
         android:textSize="30dp" />
 
+    <!--Stage-->
+    <TextView
+        android:id="@+id/currentStage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="345dp"
+        android:text="0"
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/barStage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:text="Stage:"
+        android:textSize="30dp" />
+
+    <!--Click Power-->
+    <Button
+        android:id="@+id/upClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:text="Click Power"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:text="Current:"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/currentClickPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="470dp"
+        android:text="1"
+        android:textSize="14dp" />
+
+    <!--Idle Power-->
+    <Button
+        android:id="@+id/upIdle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="510dp"
+        android:text="Idle Power   "
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="555dp"
+        android:text="Current:"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/currentIdlePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="555dp"
+        android:text="1"
+        android:textSize="14dp" />
+
+    <!--prestige-->
+    <Button
+        android:id="@+id/upPrestige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="510dp"
+        android:text="Prestige   "
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="555dp"
+        android:text="Current:"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/currentPrestige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="555dp"
+        android:layout_marginStart="303dp"
+        android:text="0"
+        android:textSize="14dp"/>
 
 </RelativeLayout>
