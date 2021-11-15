@@ -248,6 +248,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //resets progression and leveling up
+                background.setBackgroundResource(R.drawable.bg1)
                 currentStage=1
                 currentGold=0
                 currentClickPower=1
@@ -267,6 +268,7 @@ class MainActivity : AppCompatActivity() {
                 showPrestigeCost.text="$prestigeUpgrade"
                 showCurrentStage.text="$currentStage"
                 showCurrentStageCost.text="$stageUpgrade"
+
             }
             else{
                 Toast.makeText(this,"Reach needed stage to Prestige!", Toast.LENGTH_SHORT).show()
