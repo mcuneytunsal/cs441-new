@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity() {
         //upgrades Prestige
         btnPrestige.setOnClickListener{
             if (currentStage>=prestigeUpgrade) {
-                if (currentPrestige == 4){
+                if (currentPrestige == 0){
                     imgEnemy.setImageResource(R.drawable.enemy2)
                 }
                 if (currentPrestige == 1){
@@ -215,7 +215,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //game ending
-                if (currentPrestige == 0){
+                if (currentPrestige == 4){
                     imgEnemy.setImageResource(R.drawable.enemy6)
                     btnClickPower.visibility=View.GONE
                     btnIdlePower.visibility=View.GONE
