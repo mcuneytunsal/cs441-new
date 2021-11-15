@@ -9,17 +9,20 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
+    //currentGold variable set to 0
+    private var currentGold=0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //ImageView and TextView's are as values or variables here
+        //ImageView set as imgEnemy
         val imgEnemy: ImageView = findViewById(R.id.imgEnemy)
-        var currentGold: TextView = findViewById(R.id.currentGold)
 
-        //toasts "Clicked" to check if the method is working, will change this method later
+        //toasts current gold amount
         imgEnemy.setOnClickListener{
-            Toast.makeText(this,"Clicked",Toast.LENGTH_SHORT).show()
+            currentGold ++
+            Toast.makeText(this, "score = $currentGold", Toast.LENGTH_SHORT).show()
         }
     }
 }
